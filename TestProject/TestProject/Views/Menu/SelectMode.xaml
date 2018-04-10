@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.Menu.SelectMode">
+    
+	<Label Text="SELECT MODE" VerticalOptions="Center" HorizontalOptions="Center" />
+    <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="12,12,0,12" VerticalOptions="Center">
+        <StackLayout Orientation="Vertical"  BackgroundColor="#000000" Padding="10,10,10,10" HorizontalOptions="Center" Margin="12,12,0,12" VerticalOptions="Center" Opacity="0.7">
+            <Label Text="SELECT MODE TO PROCEED" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White" FontSize="Large"/>
+            <Button Text= "GUEST" Clicked="OnGuestTable" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#ff6e0c" TextColor="WhiteSmoke" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="500" BorderColor="White"  BorderWidth="10" Margin="10,0,10,0"/>
+            <Button Text= "STEWARD" Clicked="OnStewardTable" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#ff6e0c" TextColor="WhiteSmoke" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="500" BorderColor="White"  BorderWidth="10" Margin="10,0,10,0"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

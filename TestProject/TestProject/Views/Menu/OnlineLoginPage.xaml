@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.Menu.OnlineLoginPage"
+             xmlns:translator="clr-namespace:TestProject.Helpers">
+    <StackLayout x:Name="MasterLayout">
+        <Label x:Name="ipinfotop"  Text="" TextColor="White" HorizontalTextAlignment="Start" FontSize="Medium" FontAttributes="Bold"/>
+       <!-- <StackLayout x:Name="LogoStackone" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Image x:Name="LoginIconone" Source="LoginIcon3.png" Margin="0,90,0,0"/>
+        </StackLayout>-->
+
+       <!-- <Label Text="WELLCOME" TextColor="White" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold"/>
+        <Label Text="{translator:Translate MASTERLOGIN}" TextColor="White" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold"/>
+        <Label Text="POS SYSTEM" TextColor="White" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold"/>-->
+
+
+        <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand" Spacing="100" Padding="20,420,20,20">
+            <StackLayout  BackgroundColor="#000000" Padding="20,20,20,20" HorizontalOptions="Center" WidthRequest="300" HeightRequest="200" VerticalOptions="Center" Opacity="0.7">
+            <ActivityIndicator x:Name="ActivitySpinnerone" Color="Red" IsRunning="True" />
+            <Entry x:Name="Entry_Usernameone" Placeholder="{translator:Translate Username}" PlaceholderColor="Gray" TextColor ="Black" VerticalOptions="Center" BackgroundColor="White"/>
+            <Entry x:Name="Entry_Passwordone" Placeholder="{translator:Translate Password}" PlaceholderColor="Gray" TextColor ="Black" IsPassword="True" VerticalOptions="Center" BackgroundColor="White"/>
+            <Button x:Name="Btn_Signinone"  Text="{translator:Translate Login}" Clicked="SignInProcedureone" BackgroundColor="Gray" TextColor="White" FontAttributes="Bold" HeightRequest="75" FontSize="Medium" BorderRadius="50" BorderWidth="2" Margin="0,20,0,0"/>
+                <!--<Button x:Name="IPchange" Text="IP CHANGE" BackgroundColor="Gray" TextColor="White" FontSize="Medium"/>-->
+            </StackLayout>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

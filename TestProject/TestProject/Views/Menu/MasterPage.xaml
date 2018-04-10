@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.Menu.MasterPage"
+             Title="TestProject">
+
+    <ContentPage.Content>
+        <StackLayout x:Name="MasterStack" VerticalOptions="FillAndExpand" BackgroundColor="Maroon">
+            <StackLayout x:Name="TopStack" BackgroundColor="Maroon">
+                <Label Text="T-LOUNGE QUICK MENU" HorizontalOptions="Center" FontSize="Medium" VerticalOptions="Center" FontAttributes="Bold" TextColor="White" />
+                <Image x:Name="LoginIconone" Source="Wooden001.png"/>
+            </StackLayout>
+            <StackLayout x:Name="MidStack" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Opacity="0.8">
+                <ListView x:Name="listview" SeparatorVisibility="None" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid BackgroundColor="Ivory" Margin="0,1,0,1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Column="2" Source="{Binding IconSource}" Margin="0,10,0,10"/>
+                                    <Label Grid.Column="3" Text="{Binding Title}" TextColor="Gray" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold" />
+                                    <BoxView HeightRequest="2" Margin="5,10,10,5" BackgroundColor="Maroon" HorizontalOptions="FillAndExpand" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout x:Name="BottomStack" VerticalOptions="EndAndExpand" Margin="0,2,0,2" Opacity="0.8">
+                <Button Text="LOG OUT" BackgroundColor="Ivory" TextColor="Gray" FontSize="Medium" FontAttributes="Bold"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

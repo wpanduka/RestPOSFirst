@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.Menu.IPaccessPage">
+    <StackLayout VerticalOptions="FillAndExpand">
+        <StackLayout >       
+
+            <StackLayout Padding="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <StackLayout Orientation="Vertical"  BackgroundColor="#000000" Padding="10,10,10,10" HorizontalOptions="Center" Margin="50,50,50,50" VerticalOptions="Center" Opacity="0.7">
+                    <Label Text="ENTER IP4 ADDRESS TO CONFIGURE " FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White"/>
+                    <Entry x:Name="input" Text="" TextColor="White" Placeholder="NETWORK IP" PlaceholderColor="White" />
+                    <Label Text="ENTER TERMINAL NUMBE5R1" FontSize="Large" HorizontalTextAlignment="Start" TextColor="White" FontAttributes="Bold"/>
+                    <Entry x:Name="inputTerminal" Text="" TextColor="White" Placeholder="TERMINAL ID" PlaceholderColor="White" HorizontalTextAlignment="Start"/>
+                    <!--<Label Text="ORDER COUNTER NUMBER" FontSize="Large" HorizontalTextAlignment="Start" TextColor="White" FontAttributes="Bold"/>-->
+                   <!-- <Entry x:Name="inputCounter" Text="" TextColor="White" Placeholder="TERMINAL ID" PlaceholderColor="White" HorizontalTextAlignment="Start"/>-->
+                    <Label Text="SELECT THEME" FontSize="Large" HorizontalTextAlignment="Start" TextColor="White" FontAttributes="Bold"/>
+                    <StackLayout Padding="10" Orientation="Horizontal" >
+                        <Picker x:Name="themeName" Title="SELECT THEME STYLE" SelectedIndexChanged="MainPicker_Index" TextColor="White"/>
+                    </StackLayout>
+                    <!--<Entry x:Name="themenum" Text="" TextColor="White" Placeholder="TERMINAL ID" PlaceholderColor="White" HorizontalTextAlignment="Start"/>-->
+                    <Button Text="save" Clicked="savebuton" />                    
+                    <!--<Button Text="Areyou" Clicked="clicktest" />-->
+                    <Button Text="TEST CONNECTION" Clicked="load" />
+                    <Label x:Name="fileinfo" Text="" TextColor="White" />
+                    <Label x:Name="fileinside" Text="" TextColor="White"/>
+                    <Button Text="PROCEED WITH SYSTEM" Clicked="loadread" />                    
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

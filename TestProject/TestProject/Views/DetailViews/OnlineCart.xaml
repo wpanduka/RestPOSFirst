@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TestProject.Views.DetailViews;assembly=TestProject.Views.DetailViews"
+             x:Class="TestProject.Views.DetailViews.OnlineCart">
+    <StackLayout >
+        <ListView x:Name="cartone" RowHeight="140"  ItemSelected="OnSelectedItem"> 
+            <ListView.ItemTemplate>
+                <DataTemplate>                    
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="OnMore" CommandParameter="{Binding ID, Mode=TwoWay}"  Text="EDIT" />
+                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding ID, Mode=TwoWay}" Text="DELETE" IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                        <StackLayout>
+                            <StackLayout  Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal"  BackgroundColor="Ivory" Opacity="0.9">
+                                    <StackLayout Orientation="Vertical">
+                                        <Grid Padding="10,5,5,10" >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200"/>
+                                                <ColumnDefinition Width="200"/>
+                                                <ColumnDefinition Width="200"/>
+                                                <ColumnDefinition Width="200"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="{Binding Name}" FontSize="22" TextColor="Gray" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" />
+                                            <Label Text="{Binding Comments}" FontSize="15" TextColor="Gray" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"/>                                       
+                                            <Label Text="{Binding ID, Mode=TwoWay}" FontSize="Medium" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="White" IsVisible="False"/>
+                                            <Label Text="$" FontSize="22" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Gray" FontAttributes="Bold" Grid.Column="2" Grid.Row="0" Margin="10,0,0,0" IsVisible="False"/>
+                                            <Label Text="{Binding Price, StringFormat='$ {0:F0}'}" FontSize="22" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="2" Grid.Row="0" />
+                                            <Label Text="QTY" FontSize="22" VerticalOptions="Center" HorizontalOptions="End" TextColor="Gray" FontAttributes="Bold" Grid.Column="0" Grid.Row="2" />
+                                            <Label Text="{Binding Qty }" FontSize="22" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="Start" Grid.Column="1" Grid.Row="2" />
+                                            <Label Text="$" FontSize="22" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Gray" FontAttributes="Bold" Grid.Column="3" Grid.Row="2" IsVisible="False"/>
+                                            <Label Text="{Binding Total,StringFormat='$ {0:F3}'}" FontSize="22" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="3" Grid.Row="2" />
+                                            <Label Text="{Binding Stewardname}" FontSize="22" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="Start" Grid.Column="0" Grid.Row="3"/>
+                                            <BoxView HeightRequest="5" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="4" Margin="10,2,10,2"/>
+                                        </Grid>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>                 
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout >
+            <Grid RowSpacing="0" ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="foodback" Text="BACK TO FOOD MENU" Clicked="MainMenu_btn_Clicked" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <BoxView Color="#939393" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+                <BoxView Color="#939393" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"/>
+                <BoxView Color="#939393" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4"/>
+                <BoxView Color="#939393" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4"/>
+                <BoxView Color="#321414" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4"/>                
+                <Label  Text="SUB TOTAL" FontSize="22" FontAttributes="Bold" TextColor="#696969" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center"/>
+                <Label Text="$" FontSize="22" TextColor="#696969" Grid.Row="1" Grid.Column="2" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
+                <Label x:Name="total" FontSize="22" TextColor="#696969" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                <Label  Text="GRAND TOTAL" FontSize="22" FontAttributes="Bold" TextColor="#3f3f3f" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center"/>
+                <Label x:Name="gandtot"  FontSize="22" TextColor="#3f3f3f" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                <Button Text="EMPTY CART" Clicked="Cart_btn_Clicked" Grid.Row="0" Grid.Column="0" FontSize="Default" FontAttributes="Bold" BackgroundColor="#CF5300" TextColor="White" Margin="10,0,10,0" IsVisible="False"/>
+                <Button Text="MAIN MENU" Clicked="MainbtnClicked" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" FontSize="16" FontAttributes="Bold" BackgroundColor="#CF5300" TextColor="White" Margin="10,0,10,0" IsVisible="True"/>
+                <Button Text="CONFIRM KOT" Clicked="KOT_btn_Clicked" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="22" FontAttributes="Bold" BackgroundColor="#CF5300" TextColor="White" Margin="10,5,10,5" HeightRequest="80" BorderRadius="40" BorderColor="Maroon" BorderWidth="1"/>
+                <Button Text="TABLE PAGE" Clicked="Table_btn_Clicked" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="Default" FontAttributes="Bold" BackgroundColor="#CF5300" TextColor="White" Margin="10,0,10,0" IsVisible="False"/>
+            </Grid>            
+        </StackLayout>
+    </StackLayout>        
+</ContentPage>

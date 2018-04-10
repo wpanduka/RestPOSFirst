@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.KOTsendPage">
+    
+    <StackLayout>
+        <Grid>
+            <StackLayout Padding="100" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                <Label Text="YOU HAVE SUCESSFULLY COMPLETED THE ORDER!" FontSize="Large" HorizontalTextAlignment="Center" TextColor="White"/>
+                <Label Text="YOUR ORDER WILL BE PROCESSED SOON" FontSize="Large" HorizontalTextAlignment="Center" TextColor="White"/>
+                <Button Text="LAST ORDER SUMMARY " Clicked="Menuback_btn_Clickedone"/>
+                <Button x:Name="tabdone" Text="BACK TO DASHBOARD" Clicked="table_Clickedone" />
+            </StackLayout>
+        </Grid>
+        <ListView x:Name="cartwo" RowHeight="120">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>                       
+                        <StackLayout  Orientation="Vertical" Padding="2" VerticalOptions="Fill" >
+                            <StackLayout Orientation="Horizontal"  BackgroundColor="CadetBlue" >
+                                <StackLayout Orientation="Horizontal" BackgroundColor="Blue"  >
+                                    <StackLayout Orientation="Vertical" VerticalOptions="Fill" HorizontalOptions="FillAndExpand" BackgroundColor="CadetBlue">
+                                        <Label Text="{Binding Name}" FontSize="Medium" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="White"/>
+                                        <Label Text="{Binding Comments}" FontSize="Medium" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="White"/>
+                                        <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="270" />
+                                                <ColumnDefinition Width="270" />
+                                                <ColumnDefinition Width="270" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="ITEM PRICE" Grid.Row="0" Grid.Column="0"  FontSize="Micro" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="DarkSlateGray"/>
+                                            <Label Text="{Binding Price}" FontSize="Medium" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                            <Label Text="ITEM QUANTITY" Grid.Row="0" Grid.Column="1"  FontSize="Micro" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="DarkSlateGray"/>
+                                            <Entry Text="{Binding Qty}" FontSize="Medium" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" FontAttributes="Bold" IsEnabled="False" Opacity="1" TextColor="Black"/>
+                                            <Label Text="ITEM TOTAL AMOUNT" Grid.Row="0" Grid.Column="2"  FontSize="Micro" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="DarkSlateGray"/>
+                                            <Label Text="{Binding Total}" FontSize="Medium" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                        </Grid>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>               
+    </StackLayout>
+</ContentPage>

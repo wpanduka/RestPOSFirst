@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.Menu.ChangeLanguagePage"
+             xmlns:translator="clr-namespace:TestProject.Helpers">
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+            <Label FontSize="Large" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" Text="{translator:Translate selectLanguage}"/>
+            <Picker x:Name="picker" Title="SELECT LANGUAGE"/>            
+            <Button Text="{translator:Translate Continue}" Clicked="OnUpdateLangugeClicked" BackgroundColor="Black" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

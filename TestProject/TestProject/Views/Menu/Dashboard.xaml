@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.Menu.Dashboard"
+             xmlns:translator="clr-namespace:TestProject.Helpers">
+
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutFlags="PositionProportional, SizeProportional" AbsoluteLayout.LayoutBounds="1,0,1,1">
+        <Grid x:Name="GridDetails" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,0.1,0.1" BackgroundColor="Transparent" RowSpacing="0.5" ColumnSpacing="0.5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="400"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+            
+                <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,0,0" Source="foodOrder.jpg" Grid.Column="0" Grid.Row="0"/>
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,0,0" BackgroundColor="#000000" Opacity="0.5" >
+                <!--<Label Text="hello" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontAttributes="Bold"/>-->
+
+                    <Button Text="START ORDER" Clicked="test_Clicked" Command="{Binding SlideFromLeftCommand}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="42" FontFamily="ubuntu" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" Opacity="1" IsEnabled="True"/>
+               
+            </Grid>
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="searchf.jpg" Grid.Row="0" Grid.Column="1"/>
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="#000000" Opacity="0.5" Grid.Row="0" Grid.Column="1" >
+                <Button Text="SEARCH FOOD" Clicked="onlinetab_Clicked" HorizontalOptions="Center" VerticalOptions="Center" FontSize="42" FontFamily="ubuntu" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" Opacity="1"/>
+            </Grid>
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="Loginp.jpg" Grid.Row="1" Grid.Column="0"/>
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="#000000" Opacity="0.5" Grid.Row="1" Grid.Column="0" >
+                <Button Text="LOGIN PAGE" Clicked="table_Clicked" HorizontalOptions="Center" VerticalOptions="Center" FontSize="42" FontFamily="ubuntu" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" Opacity="1"/>
+            </Grid>
+
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="teaAbout.jpeg" Grid.Row="1" Grid.Column="1"/>
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="#000000" Opacity="0.5" Grid.Row="1" Grid.Column="1" >
+                    <Button Text="ABOUT US" Clicked="onbar_Clicked" HorizontalOptions="Center" VerticalOptions="Center" FontSize="42" FontFamily="ubuntu" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" Opacity="1"/>
+            </Grid>
+
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="Locationp.jpeg"  Grid.Row="2" Grid.Column="0"/>
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="#000000" Opacity="0.5"  Grid.Row="2" Grid.Column="0" >
+                <Button Text="LOCATIONS" Clicked="Vedio_btn_Clicked" HorizontalOptions="Center" VerticalOptions="Center" FontSize="42" FontFamily="ubuntu" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" Opacity="1"/>
+            </Grid>
+
+            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="Exitap.jpeg"  Grid.Row="2" Grid.Column="1"/>
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="#000000" Opacity="0.5"  Grid.Row="2" Grid.Column="1" >
+                <Button Text="EXIT" x:Name="exitnow" Clicked="Exit_btn_Clicked" HorizontalOptions="Center" VerticalOptions="Center" FontSize="42" FontFamily="ubuntu" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" Opacity="1"/>
+            </Grid>
+        </Grid>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>
+

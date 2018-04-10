@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.TableNew">
+     <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        <Button  x:Name="Btn_1" Text = "112" Grid.Row="1" Grid.Column="0" Clicked="Pro1" FontSize="Medium" FontAttributes="Bold"/>
+        <Button  x:Name="Btn_2" Text = "113" Grid.Row="1" Grid.Column="1" Clicked="Pro2" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_3" Text = "114" Grid.Row="1" Grid.Column="2" Clicked="Pro3" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_4" Text = "115" Grid.Row="1" Grid.Column="3" Clicked="Pro4" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_5" Text = "116" Grid.Row="2" Grid.Column="0" Clicked="Pro5" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_6" Text = "TAB1258" Grid.Row="2" Grid.Column="1" Clicked="Pro6" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_7" Text = "TAB1485" Grid.Row="2" Grid.Column="2" Clicked="Pro7" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_8" Text = "TAB1025" Grid.Row="2" Grid.Column="3" Clicked="Pro8" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_9" Text = "TAB2014" Grid.Row="3" Grid.Column="0" Clicked="Pro9" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_10" Text = "TAB1478" Grid.Row="3" Grid.Column="1" Clicked="Pro10" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_11" Text = "TABL1480" Grid.Row="3" Grid.Column="2" Clicked="Pro11" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_12" Text = "TAB15012" Grid.Row="3" Grid.Column="3" Clicked="Pro12" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_13" Text = "TAB1587" Grid.Row="4" Grid.Column="0" Clicked="Pro13" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_14" Text = "TAB1587" Grid.Row="4" Grid.Column="1" Clicked="Pro14" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_15" Text = "TAB2017" Grid.Row="4" Grid.Column="2" Clicked="Pro15" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_16" Text = "TABLE-16" Grid.Row="4" Grid.Column="3" Clicked="Pro16" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_17" Text = "TABLE-17" Grid.Row="5" Grid.Column="0" Clicked="Pro17" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_18" Text = "TABLE-18" Grid.Row="5" Grid.Column="1" Clicked="Pro18" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_19" Text = "TABLE-19" Grid.Row="5" Grid.Column="2" Clicked="Pro19" FontSize="Medium" FontAttributes="Bold"/>
+        <Button x:Name="Btn_20" Text = "TABLE-20" Grid.Row="5" Grid.Column="3" Clicked="Pro20" FontSize="Medium" FontAttributes="Bold"/>
+        </Grid>       
+</ContentPage>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.FoodTabPage"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+             xmlns:ctrls="clr-namespace:TestProject.Data;assembly=TestProject"             
+             xmlns:local ="clr-namespace:TestProject;assembly=TestProject">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ResturentItemToImageSourceConverter x:Key="severityTypeImageConvertertwo"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Search" Clicked="Search"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout x:Name="stackLayoutShowHide" IsVisible="False">
+                <Entry Placeholder="Your text to search" TextChanged="searchChanged" TextColor="Gray" BackgroundColor="White"/>
+            </StackLayout>
+            <ListView x:Name="mealsListView" HasUnevenRows="True" ItemSelected="listviewContacts_ItemSelected" CachingStrategy="RecycleElement" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout  Orientation="Vertical" Padding="5">
+                                <StackLayout Orientation="Horizontal"  BackgroundColor="Ivory" Opacity="0.9">
+                                    <local:CustomCachedImage HeightRequest="200" WidthRequest="200" DownsampleToViewSize="true" Source="{Binding ., Converter={StaticResource severityTypeImageConvertertwo}}"/>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Name}" FontSize="22" TextColor="Gray" FontAttributes="Bold"/>
+                                        <BoxView HeightRequest="2" Margin="0,10,10,0" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
+                                        <Label Text="{Binding Description}" FontSize="15" TextColor="Gray" FontAttributes="Bold"/>
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="Start">
+                                            <Label Text="$" FontSize="22" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Gray" FontAttributes="Bold"/>
+                                            <Label Text="{Binding Price}" FontSize="22" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="Start"/>                                            
+                                        </StackLayout>
+                                        <Grid >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="50"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label x:Name="add" Text="ADD TO CART" Grid.Column="0" Grid.Row="0" TextColor="White" WidthRequest="200" HeightRequest="40" FontAttributes="Bold" FontSize="Medium" BackgroundColor="#CF5300" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                                           <!-- <Button x:Name="dont" Text="SHARE" Grid.Column="1" Grid.Row="0" TextColor="White" WidthRequest="200" HeightRequest="40"  BorderColor="Black" FontAttributes="Bold" FontSize="Medium" BackgroundColor="#CF5300"/>-->
+                                            <local:CustomCachedImage Source="star.png" Aspect="AspectFit" Grid.Column="1" Grid.Row="0" BackgroundColor="Transparent" WidthRequest="200" HeightRequest="40" HorizontalOptions="StartAndExpand"/>
+                                        </Grid>
+                                    </StackLayout>
+                                    <local:CustomCachedImage Source="arrowtwo.png" Aspect="AspectFit" BackgroundColor="Transparent" WidthRequest="25" Margin="0,10,10,0" HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+    <!-- <ctrls:LSImage/>-->
+</ContentPage>

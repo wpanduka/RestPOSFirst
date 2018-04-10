@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.LoginPage"
+             xmlns:translator="clr-namespace:TestProject.Helpers">
+	
+    <StackLayout x:Name="MasterLayout">
+
+        <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+             <Image x:Name="LoginIcon" Source="LoginIcon1.png" Margin="0,80,0,0"/>
+        </StackLayout>
+
+        <Label Text="{translator:Translate HelloMassage}" TextColor="White" HorizontalTextAlignment="Center" FontSize="Medium"/>
+        <Label Text="{translator:Translate MASTERLOGIN}" TextColor="White" HorizontalTextAlignment="Center" FontSize="Medium" />
+        <Label Text="{translator:Translate POSsystem}" TextColor="White" HorizontalTextAlignment="Center" FontSize="Medium" />
+        
+        
+        <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand" Spacing="20" Padding="20">
+
+            <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True" />
+
+
+            <Entry x:Name="Entry_Username" Placeholder="{translator:Translate Username}" PlaceholderColor="Gray" TextColor ="White"/>
+            <Entry x:Name="Entry_Password" Placeholder="{translator:Translate Password}" PlaceholderColor="Gray" TextColor ="White" IsPassword="True"/>
+            <Button x:Name="Btn_Signin"  Text="{translator:Translate Login}" Clicked="SignInProcedure"/>        
+            
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

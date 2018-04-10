@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.JsonMilkShakePage"
+             xmlns:local ="clr-namespace:TestProject.Data">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ByteArrayToImageConverter x:Key="severityTypeImageConvertertwo"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ListView x:Name="listviewConactstwo" RowHeight="100" HorizontalOptions="FillAndExpand" HasUnevenRows="True" ItemSelected="listviewContacts_ItemSelected" CachingStrategy="RecycleElement">
+        <ActivityIndicator x:Name="ProgressLoadertwo" IsRunning="True"/>
+        <x:Arguments>
+            <ListViewCachingStrategy>
+                <OnPlatform x:TypeArguments="ListViewCachingStrategy" iOS="RetainElement" Android="RecycleElement"/>
+            </ListViewCachingStrategy>
+        </x:Arguments>
+        <ListView.ItemTemplate >
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout  Orientation="Vertical" Padding="5">
+                        <StackLayout Orientation="Horizontal"  BackgroundColor="Ivory" Opacity="0.9">
+                            <Image Source="{Binding Image,Converter={StaticResource severityTypeImageConvertertwo}}" HeightRequest="120" WidthRequest="120"/>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Name}" FontSize="Medium" TextColor="Gray" FontAttributes="Bold"/>
+                                <BoxView HeightRequest="2" Margin="0,10,10,0" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
+                                <Label Text="{Binding Description}" FontSize="Micro" TextColor="Gray" FontAttributes="Bold"/>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="Start">
+                                    <Label Text="$" FontSize="Micro" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Gray" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Price}" FontSize="Micro" TextColor="Gray" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <Image Source="arrowtwo.png" BackgroundColor="Transparent" WidthRequest="25" Margin="0,10,10,0"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

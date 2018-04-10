@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.CartTiketsPage">
+
+    <ListView x:Name="listviewTicketGroup" HasUnevenRows="True" HorizontalOptions="Center" ItemSelected="listviewTable_ItemSelected">
+        <ListView.ItemTemplate >
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="12,12,0,12" VerticalOptions="CenterAndExpand">
+                        <Grid RowSpacing="1" ColumnSpacing="1" Padding="2" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="150" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="270" />
+                            </Grid.ColumnDefinitions>
+                            <Button Text= "{Binding TicketID}" Clicked="OnTicketClicked" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#ff6e0c" TextColor="WhiteSmoke" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="80" WidthRequest="220" />
+                        </Grid>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>

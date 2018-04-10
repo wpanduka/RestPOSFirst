@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FormsControls.Base.BrandBlock"
+    Padding="15"
+    BackgroundColor="{StaticResource MainBackgroundColor}"
+    ColumnSpacing="12"
+    Style="{StaticResource BrandContainerStyle}">
+    <Grid.Resources>
+        <ResourceDictionary>
+            <Color x:Key="AccentColor">#FFFFFF</Color>
+            <Color x:Key="MainBackgroundColor">#283441</Color>
+            <Style x:Key="BrandContainerStyle" TargetType="StackLayout" >
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+            </Style>
+            <Style x:Key="BrandNameStyle" TargetType="Label" >
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </Grid.Resources>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="64" />
+        <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Image Grid.Column="0"
+        HeightRequest="64" 
+        WidthRequest="64" 
+        Source="logo.png" />
+    <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand" Padding="10,3,0,7" >
+        <Label Style="{StaticResource BrandNameStyle}" 
+            Text="Navigation" 
+            FontAttributes="Bold" 
+            VerticalOptions="Start" 
+            VerticalTextAlignment="Start"/>
+        <Label TextColor="White"
+            FontSize="16"
+            Text="With Animations" 
+            VerticalOptions="Start" 
+            VerticalTextAlignment="Start"/>
+    </StackLayout>
+</Grid>

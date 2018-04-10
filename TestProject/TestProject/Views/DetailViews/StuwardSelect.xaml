@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.StuwardSelect">
+    <ListView x:Name="listviewStuward" HasUnevenRows="True" HorizontalOptions="Center" ItemSelected="listviewTable_ItemSelected">
+        <ListView.ItemTemplate >
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="12,12,0,12" VerticalOptions="Center">
+                        <Grid RowSpacing="1" ColumnSpacing="1" Padding="2" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="270" />
+                            </Grid.ColumnDefinitions>
+                            <Button Text= "{Binding StName}" Clicked="OnStartClicked" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#ff6e0c" TextColor="WhiteSmoke" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="200" BorderColor="Maroon" BorderRadius="50" BorderWidth="10"/>
+                        </Grid>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

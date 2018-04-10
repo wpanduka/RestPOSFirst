@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.FinalCart">
+    
+    <StackLayout Padding="20" HorizontalOptions="Start" VerticalOptions="Center">
+        <Label Text="YOU HAVE SUCESSFULLY COMPLTED THE ORDER!" FontSize="Large" HorizontalTextAlignment="Center" TextColor="White"/>
+        <Label Text="YOUR ORDER WILL BE PROCESSED SOON" FontSize="Large" HorizontalTextAlignment="Center" TextColor="White"/>
+        <Button Text="LAST ORDER SUMMARY " Clicked="Menuback_btn_Clicked"/>
+        <Button Text="BACK TO MAIN MENU" Clicked="table_Clicked" />        
+    </StackLayout>
+
+
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.TableNew2">
+    <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button  x:Name="Btn_1" Text = "T1" Grid.Row="1" Grid.Column="0" Clicked="Pro1" FontSize="Large" />
+        <Button  x:Name="Btn_2" Text = "T2" Grid.Row="1" Grid.Column="1" Clicked="Pro2" FontSize="Large"/>
+        <Button x:Name="Btn_3" Text = "T3" Grid.Row="1" Grid.Column="2" Clicked="Pro3" FontSize="Large"/>
+        <Button x:Name="Btn_4" Text = "T4" Grid.Row="1" Grid.Column="3" Clicked="Pro4" FontSize="Large"/>
+        <Button x:Name="Btn_5" Text = "T5" Grid.Row="2" Grid.Column="0" Clicked="Pro5" FontSize="Large"/>
+        <Button x:Name="Btn_6" Text = "T6" Grid.Row="2" Grid.Column="1" Clicked="Pro6" FontSize="Large"/>
+        <Button x:Name="Btn_7" Text = "T7" Grid.Row="2" Grid.Column="2" Clicked="Pro7" FontSize="Large"/>
+        <Button x:Name="Btn_8" Text = "T8" Grid.Row="2" Grid.Column="3" Clicked="Pro8" FontSize="Large"/>
+        <Button x:Name="Btn_9" Text = "T9" Grid.Row="3" Grid.Column="0" Clicked="Pro9" FontSize="Large"/>
+        <Button x:Name="Btn_10" Text = "T10" Grid.Row="3" Grid.Column="1" Clicked="Pro10" FontSize="Large"/>
+        <Button x:Name="Btn_11" Text = "T11" Grid.Row="3" Grid.Column="2" Clicked="Pro11" FontSize="Large"/>
+        <Button x:Name="Btn_12" Text = "T12" Grid.Row="3" Grid.Column="3" Clicked="Pro12" FontSize="Large"/>
+        <Button x:Name="Btn_13" Text = "T13" Grid.Row="4" Grid.Column="0" Clicked="Pro13" FontSize="Large"/>
+        <Button x:Name="Btn_14" Text = "T14" Grid.Row="4" Grid.Column="1" Clicked="Pro14" FontSize="Large"/>
+        <Button x:Name="Btn_15" Text = "T15" Grid.Row="4" Grid.Column="2" Clicked="Pro15" FontSize="Large"/>
+        <Button x:Name="Btn_16" Text = "T16" Grid.Row="4" Grid.Column="3" Clicked="Pro16" FontSize="Large"/>
+        <Button x:Name="Btn_17" Text = "T17" Grid.Row="5" Grid.Column="0" Clicked="Pro17" FontSize="Large"/>
+        <Button x:Name="Btn_18" Text = "T18" Grid.Row="5" Grid.Column="1" Clicked="Pro18" FontSize="Large"/>
+        <Button x:Name="Btn_19" Text = "T19" Grid.Row="5" Grid.Column="2" Clicked="Pro19" FontSize="Large"/>
+        <Button x:Name="Btn_20" Text = "T20" Grid.Row="5" Grid.Column="3" Clicked="Pro20" FontSize="Large"/>
+    </Grid>
+</ContentPage>

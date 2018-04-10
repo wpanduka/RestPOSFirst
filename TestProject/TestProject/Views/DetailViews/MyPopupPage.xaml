@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="TestProject.Views.DetailViews.MyPopupPage">
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20, 20, 20, 20" BackgroundColor="White">
+        <Grid x:Name="GridDetails">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="ADD-ON 1:" Grid.Column="0" Grid.Row="0" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" />
+            <Label x:Name="ADD1" Text="EXTRA-CHEESE" Grid.Row="0" Grid.Column="1" TextColor="Orange" FontAttributes="Bold" FontSize="Medium"/>
+            <Switch x:Name="addon1switch" VerticalOptions="Start" Grid.Row="0" Grid.Column="2"/>
+            <Label Text="ADD-ON 2:" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" />
+            <Label x:Name="ADD2" Text="EXTRA-SPICY" Grid.Row="1" Grid.Column="1" TextColor="Orange" FontSize="Medium" FontAttributes="Bold"/>
+            <Switch x:Name="addon2switch" VerticalOptions="Start" Grid.Row="1" Grid.Column="2"/>
+            <Label Text="ADD-ON 3:" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" />
+            <Label x:Name="ADD3" Text="EXTRA SUGAR" Grid.Row="2" Grid.Column="1" TextColor="Orange" FontSize="Medium" FontAttributes="Bold"/>
+            <Switch x:Name="addon3switch" VerticalOptions="Start" Grid.Row="2" Grid.Column="2"/>
+            <Label Text="ADD-ON 4:"  Grid.Row="3" Grid.Column="0" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" />
+            <Label x:Name="ADD4" Text="EXTRA PEPPER" Grid.Column="1" Grid.Row="3" TextColor="Orange"  FontAttributes="Bold" FontSize="Medium"/>
+            <Switch x:Name="addon4switch" VerticalOptions="Start" Grid.Row="3" Grid.Column="2"/>
+            <Button x:Name="exitbut" Text="done" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
+        </Grid>
+    </StackLayout>
+</pages:PopupPage>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.RenewJasonDetails">
+    <ContentPage.Content>
+        <Grid>
+            <Grid x:Name="GridDetails" VerticalOptions="Center" HorizontalOptions="Center" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="400"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>                  
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="image:" HorizontalOptions="StartAndExpand" Grid.Row="0" Grid.Column="0" Margin="20" FontAttributes="Bold" TextColor="Gray" FontSize="Medium"/>
+                <Label Text="Product Name:" HorizontalOptions="StartAndExpand" Grid.Row="1" Grid.Column="0" Margin="20" FontAttributes="Bold" TextColor="Gray" FontSize="Medium"/>
+                <Label x:Name="Name" Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Grid.Row="1" Grid.Column="1" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="Description:" HorizontalOptions="StartAndExpand" Grid.Row="2" Grid.Column="0" Margin="20" FontAttributes="Bold" TextColor="Gray" FontSize="Medium"/>
+                <Label x:Name="Description" Text="{Binding Description}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Grid.Row="2" Grid.Column="1" TextColor="Orange" FontSize="Small" FontAttributes="Bold"/>
+                <Label Text="Price:" HorizontalOptions="StartAndExpand" Grid.Row="3" Grid.Column="0"  Margin="20" FontAttributes="Bold" TextColor="Gray" FontSize="Medium"/>
+                <Label x:Name="Price" Text="{Binding Price}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Grid.Column="1" Grid.Row="3" TextColor="White"  FontAttributes="Bold" FontSize="Medium"/>
+                <Grid Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Select Quantity:" HorizontalOptions="StartAndExpand" Grid.Row="0" Grid.Column="0"  Margin="20" FontAttributes="Bold" TextColor="Gray" FontSize="Medium"/>
+                    <Entry x:Name="Qty" Text="1" Keyboard="Numeric" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Grid.Column="1" Grid.Row="0" TextColor="White"  FontAttributes="Bold" FontSize="Medium"/>
+                    <Label Text="Enter Batch No:" HorizontalOptions="End" Grid.Row="0" Grid.Column="2"  Margin="20" FontAttributes="Bold" TextColor="Gray" FontSize="Medium"/>
+                    <Entry x:Name="Batch" Text="1" Keyboard="Numeric" VerticalOptions="Center" HorizontalOptions="End" Grid.Column="3" Grid.Row="0" TextColor="White"  FontAttributes="Bold" FontSize="Medium"/>
+                </Grid>
+                <Button Text="EXTRA ADD-ONS" Clicked="OnClick" Grid.Row="5" Grid.Column="0" Margin="10" BackgroundColor="#CF5300" TextColor="White"/>
+                <Label x:Name="results" Grid.Row="5" Grid.Column="1" TextColor="Orange" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="Medium"/>
+                <Label x:Name="ItemID" HorizontalOptions="StartAndExpand" Grid.Row="6" Grid.Column="0"  Margin="20" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" IsVisible="False"/>
+                <Label x:Name="isservicechargeinfo" HorizontalOptions="StartAndExpand" Grid.Row="6" Grid.Column="0"  Margin="20" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" IsVisible="False"/>
+                <Label x:Name="CostPriceDetail" HorizontalOptions="StartAndExpand" Grid.Row="6" Grid.Column="0"  Margin="20" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" IsVisible="False"/>
+                <Label x:Name="codedetails" HorizontalOptions="StartAndExpand" Grid.Row="6" Grid.Column="0"  Margin="20" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" IsVisible="False"/>
+                <Button Grid.ColumnSpan="2" Text="ADD THIS ITEM TO CART" Clicked="Addr_btn_Clicked" Grid.Row="7" Grid.Column="0" FontAttributes="Bold" TextColor="White" Margin="10,0,10,0" FontSize="Medium" BackgroundColor="#CF5300"/>
+                <Label Grid.ColumnSpan="2" Text="SIMILAR PRODUCTS" Grid.Row="8" Grid.Column="0" FontAttributes="Bold" TextColor="White" Margin="10,0,10,0" FontSize="Medium" HorizontalTextAlignment="Center"/>                
+            </Grid>           
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.PayNow">
+	<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+    <StackLayout Spacing="20" Padding="20" VerticalOptions="Center">
+
+        <Entry Placeholder="Customer Name" PlaceholderColor="Gray" TextColor="White"/>
+        <Entry Placeholder="Name as in cradit card" PlaceholderColor="Gray" TextColor="White"/>
+        <Entry Placeholder="Cradit card number" PlaceholderColor="Gray" TextColor="White"/>
+        <Entry Placeholder="CV Code" PlaceholderColor="Gray" TextColor="White"/>
+        <Button Text="Complete Payment" Clicked="PayNow_btn_Clicked"/>
+        
+    </StackLayout>
+
+</ContentPage>

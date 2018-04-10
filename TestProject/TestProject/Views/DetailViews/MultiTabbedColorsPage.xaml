@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"            
+             x:Class="TestProject.Views.DetailViews.MultiTabbedColorsPage"
+             xmlns:local ="clr-namespace:TestProject.Data"
+             ItemsSource="{Binding Resturent}">
+
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <local:ByteArrayToImageConverter x:Key="severityTypeImageConvertertwo"/>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <TabbedPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage Title="{Binding Name}" HeightRequest="20">
+                <StackLayout Padding="25, 10">
+                    <Label Text="{Binding Name}" Font="Bold,Large" HorizontalOptions="Center" />
+                    <Image Source="{Binding Image,Converter={StaticResource severityTypeImageConvertertwo}}" HeightRequest="120" WidthRequest="120"/>
+                    <StackLayout Padding="50, 10">
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Family:" HorizontalOptions="FillAndExpand" />
+                            <Label Text="{Binding Description}" Font="Bold,Medium" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </TabbedPage.ItemTemplate>
+</TabbedPage>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ma="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             x:Class="TestProject.Views.Menu.MainVedioPage"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout>        
+        <ma:VideoView WidthRequest="400" HeightRequest="650" />
+        <!--<Button x:Name="PlayStopButton" Text="Play" Clicked="PlayStop_Clicked" TextColor="White" BackgroundColor="Black" FontSize="Small" HeightRequest="10"/>-->
+       
+            <Grid RowSpacing="1" Padding="2" VerticalOptions="Center" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300" />
+                    <ColumnDefinition Width="300" />
+                </Grid.ColumnDefinitions>
+            <Button Clicked="test_Clicked" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="290" HeightRequest="240" BackgroundColor="SlateGray" TextColor="White" BorderColor="White" BorderRadius="50" BorderWidth="2" FontSize="Medium" FontAttributes="Italic" Text="READY TO ORDER" />
+            <!--<Button Clicked="onlinetab_Clicked" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="290" HeightRequest="240" BackgroundColor="Transparent" TextColor="White" BorderColor="White" BorderRadius="50" BorderWidth="2" FontSize="Medium" FontAttributes="Italic" Text="STEWARD"/>-->
+            </Grid>       
+        <Label Text="BEST DEALS AND PROMOTIONS" TextColor="White" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center"/>           
+       <!-- <StackLayout>
+            <forms:CarouselView x:Name="wordheading" >
+                <forms:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" FontSize="Medium" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    </DataTemplate>
+                </forms:CarouselView.ItemTemplate>
+            </forms:CarouselView>
+        </StackLayout>-->
+        <forms:CarouselView x:Name="mainCarosel" ItemSelected="MainCarouselView_ItemSelected" >
+                <forms:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                    <StackLayout  Orientation="Vertical" Padding="5" >
+                        <StackLayout Orientation="Horizontal"  BackgroundColor="Black" Opacity="0.9" >                       
+                              <Image Source="{Binding .}" HeightRequest="500" WidthRequest="600" />
+                                <StackLayout Orientation="Vertical" Opacity="0.7" Padding="5,95,5,5" BackgroundColor="#5d5d5d" Margin="10,24,10,24">
+                                <Label Text="SESSION SPECIAL MEALS" FontSize="Medium" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                                <BoxView HeightRequest="2" Margin="0,10,10,0" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" />
+                                <Label Text="BEST DEALS AND PROMOTIONS AT T-LOUNGE CUSTOMERS ONLY ON THIS SESSION" FontSize="Small" TextColor="White"/>
+                                </StackLayout>
+                                <!--<Label Text="1234" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="17"  WidthRequest="60" HorizontalTextAlignment="End"  />-->
+                                <!--<Label Text="$" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Micro" WidthRequest="5" />-->
+                              </StackLayout>
+                        </StackLayout>                 
+                    <!-- <Image Source="{Binding .}" HeightRequest="200" WidthRequest="400" />-->
+                    </DataTemplate>
+                </forms:CarouselView.ItemTemplate>
+            </forms:CarouselView>       
+    </StackLayout>    
+</ContentPage>

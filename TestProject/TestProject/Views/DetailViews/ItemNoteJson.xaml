@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.ItemNoteJson">
+    
+    <ListView x:Name="listviewNotes" HasUnevenRows="True" HorizontalOptions="CenterAndExpand" ItemSelected="listviewTable_ItemSelected">
+        <ListView.ItemTemplate >
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" Margin="12,12,0,12" VerticalOptions="StartAndExpand">
+                        <Grid RowSpacing="1" ColumnSpacing="1" Padding="2" VerticalOptions="Start" HorizontalOptions="Start">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="270" />
+                                <ColumnDefinition Width="270" />
+                            </Grid.ColumnDefinitions>                            
+                            <Label Text= "{Binding ID}" Grid.Column="0" Grid.Row="0"  FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalOptions="StartAndExpand"/>
+                            <Label Text= "{Binding Name}" Grid.Column="1" Grid.Row="0"  FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                            <Switch IsToggled="{Binding isOn, Mode=TwoWay}"  Grid.Column="2" Grid.Row="0" HorizontalOptions="EndAndExpand"/>
+                        </Grid>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>    
+</ContentPage>

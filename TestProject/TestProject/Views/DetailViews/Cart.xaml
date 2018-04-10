@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.Cart">
+	<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+    <StackLayout>
+        <ListView x:Name="cart" RowHeight="120">
+              <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="OnMore" CommandParameter="{Binding Id}" Text="More" />
+                                <MenuItem Clicked="OnDelete" CommandParameter="{Binding Id}" Text="Delete" IsDestructive="True" />
+                            </ViewCell.ContextActions>
+                            <StackLayout  Orientation="Vertical" Padding="2" VerticalOptions="Fill" >
+                                <StackLayout Orientation="Horizontal"  BackgroundColor="CadetBlue" >
+                                    <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="10"/>
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="Blue"  >
+                                        <StackLayout Orientation="Vertical" VerticalOptions="Fill" HorizontalOptions="FillAndExpand" BackgroundColor="CadetBlue">
+                                        <Label Text="{Binding Name}" FontSize="Medium" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="White"/>
+                                        <Label Text="{Binding Results}" FontSize="Medium" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="White"/>
+                                        <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="130" />
+                                                <ColumnDefinition Width="130" />
+                                                <ColumnDefinition Width="110" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="ITEM PRICE" Grid.Row="0" Grid.Column="0"  FontSize="Micro" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="DarkSlateGray"/>
+                                            <Label Text="{Binding Price}" FontSize="Medium" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                            <Label Text="ITEM QUANTITY" Grid.Row="0" Grid.Column="1"  FontSize="Micro" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="DarkSlateGray"/>
+                                            <Label Text="{Binding Qty}" FontSize="Medium" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                            <Label Text="ITEM TOTAL AMOUNT" Grid.Row="0" Grid.Column="2"  FontSize="Micro" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="DarkSlateGray"/>
+                                            <Label Text="{Binding Total}" FontSize="Medium" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                        </Grid>
+                                    </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>            
+        </ListView>
+        <Grid>
+            <StackLayout BackgroundColor="White" Padding="20" HorizontalOptions="End" VerticalOptions="Center">
+                    <Label  Text="Grand Total" FontSize="Micro" TextColor="Maroon"/>
+                    <Label x:Name="total" FontSize="Small" TextColor="Black"/>                    
+            </StackLayout>
+            <StackLayout Padding="20" HorizontalOptions="Start" VerticalOptions="Center">
+                <Button Text="FOOD MENU" Clicked="Menu_Clicked"/>
+                <Label x:Name="tablenow" FontSize="Small" TextColor="Black" BackgroundColor="White" />
+            </StackLayout>
+        </Grid>
+        <Grid>
+        <StackLayout Spacing="20" HorizontalOptions="Start" Padding="20" VerticalOptions="Center">
+            <Button Text="Delete ALL" Clicked="delete_btn_Clicked"/>
+            <Button Text="MAKE PAYMENT" Clicked="pay_btn_Clicked"/>
+        </StackLayout>
+        <StackLayout Spacing="20" HorizontalOptions="End" Padding="20" VerticalOptions="Center">
+                <Button Text="TABLE VIEW" Clicked="Tbl_btn_Clicked"/>
+                <Button Text="MAIN MENU" Clicked="main_btn_Clicked"/>
+        </StackLayout>
+            <StackLayout Spacing="20" HorizontalOptions="Center" Padding="20" VerticalOptions="Center">
+                <Button Text="CONFIRM KOT" Clicked="cal_btn_Clicked" />
+                <Button Text="LOG OUT" />
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

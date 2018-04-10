@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestProject.Views.DetailViews.AboutUs">
+	<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+    <ScrollView  Orientation = "Vertical" VerticalOptions="StartAndExpand">
+        <StackLayout Spacing="10"  Padding="15" Orientation="Vertical" x:Name ="outerstack">
+            <Label Text="Restaurant Information" HorizontalTextAlignment="Center" FontSize="Small" TextColor="Black" BackgroundColor="Silver" HeightRequest="50" VerticalTextAlignment="Center"/>
+            <Image Source="wallpaper.png" HeightRequest="250" WidthRequest="250" Aspect="AspectFit" />
+
+            <Label  Text="Dilmah is unique in that our emphasis on tea is founded on our passionate commitment to tea as tea growers and a family business; established and headed by the world's most experienced tea maker; the first tea grower to offer his tea direct to tea drinkers around the world." FontSize="Medium" BackgroundColor="Maroon" TextColor="White" />
+
+            <Label Text="t-lounge Information" HorizontalTextAlignment="Center" FontSize="Small" TextColor="Black" BackgroundColor="Silver" HeightRequest="50" VerticalTextAlignment="Center"/>
+            <Image Source="developers.png" HeightRequest="250" WidthRequest="250" Aspect="AspectFit" Opacity="0.9" />
+
+            <Label  Text="The t-Lounge by Dilmah is an upscale, elegant place designed around the enjoyment and appreciation of fine tea; complemented by light snacks and tea inspired food and beverages." FontSize="Medium" BackgroundColor="Maroon" TextColor="White" />
+
+            <Button Text="test click" Clicked="popup_testimg" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
